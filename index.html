@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Locality</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="//unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js" target="_blank"></script>
+
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="js/Tour.js"></script>
+    <script src="js/CursorEvents.js"></script>
+  </head>
+  <body>
+    <a-scene id="main-scene">
+      
+<a-assets>
+  <a-asset-item id="carimg1" src="./assets/car1/scene.gltf" > </a-asset-item>
+<a-asset-item id="carimg2" src="./assets/car2/scene.gltf"></a-asset-item>
+<a-asset-item id="carimg3" src="./assets/car3/scene.gltf"></a-asset-item>
+<a-asset-item id="carimg4" src="./assets/car4/scene.gltf"></a-asset-item>
+<a-asset-item id="streetimg" src="./assets/street/scene.gltf"></a-asset-item>
+<a-asset-item id="roadimg" src="./assets/roads/scene.gltf"></a-asset-item>
+</a-assets>
+      <!-- Places Container -->
+      
+     
+      <!-- CAMERA -->
+      <a-camera look-controls-enabled wasd-controls-enabled position="0 5 -3"></a-camera>
+        <!-- App Title -->
+        <a-entity
+          id="app-title"
+          position="-0.08 0.73 -1"
+          text="font: exo2bold; align: center; width: 1.5; color: #e91e63; value: MY LOCALITY"
+        >
+        </a-entity>
+        <a-entity id="environment" environment="preset:egypt; skyType:gradient;lighting:distant" ></a-entity>
+        <a-entity id="road" gltf-model="#roadimg" position="-15 10 11" rotation="0 45 0" scale="3 3 3"></a-entity>
+        <a-entity id="car2" gltf-model="#carimg2" position="15 0 20" rotation="0 45 0" scale="3 3 3"></a-entity>
+        <a-entity id="car4" gltf-model="#carimg4" position="-10 0 20" rotation="0 90 0" scale="3 3 3"></a-entity>
+        <!-- CURSOR -->
+      <a-plane position="20 0 45" color="dark grey" width="200" height="500"></a-plane> 
+
+      
+
+     
+    </a-scene>
+  </body>
+</html>
